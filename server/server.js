@@ -1,5 +1,7 @@
 const express = require('express');
 const cors = require('cors');
+const fileUpload = require('express-fileupload');
+const path = require('path');
 require('dotenv').config();
 
 const sequelize = require('./configs/database');
@@ -12,6 +14,8 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
+app.use(fileUpload({}));
+app.use(express.static(path.resolve(__dirname, 'static')));
 
 app.use('/api', router);
 app.use('*', errorHandlingMiddleware);

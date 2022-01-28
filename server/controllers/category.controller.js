@@ -8,14 +8,16 @@ class CategoryController {
             const category = await Category.create({name});
             res.json(category)
         } catch (e) {
-            next(e)
+            next(ApiError.badRequest(e.message));
         }
     }
-    async get(req, res, next) {
+    async getAll(req, res, next) {
         try {
-
+            console.log('test')
+            const categories = await Category.findAll();
+            return res.json(categories);
         } catch (e) {
-            next(e)
+            next(ApiError.badRequest(e.message));
         }
     }
 }
