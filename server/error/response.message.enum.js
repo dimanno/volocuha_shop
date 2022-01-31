@@ -10,5 +10,6 @@ module.exports = {
     PRODUCT_DELETED: 'Product is delete',
     INVALID_TOKEN: 'Invalid token',
     INVALID_TEMPLATE: 'Wrong template name',
-    NOT_FOUND: 'Sorry, there are no matches on your request'
+    NOT_FOUND: 'Sorry, there are no matches on your request',
+    USER_NOT_FOUND: 'User not found'
 };

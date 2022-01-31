@@ -9,7 +9,7 @@ module.exports = {
         const isPasswordMatched = await bcrypt.compare(password, hashPassword);
 
         if (!isPasswordMatched) {
-            throw new ApiError.notFound(WRONG_LOGIN_DATA)
+            throw new Error(WRONG_LOGIN_DATA);
         }
     }
 }

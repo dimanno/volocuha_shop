@@ -12,7 +12,7 @@ class UserController {
             const user = await User.create({email, role, password: hashPassword});
             const basket = await Basket.create({userId: user.id});
 
-            const token = jwtService.generateTokenPair();
+            const token = jwtService.generateTokenPair(email, role);
 
             return res.json({token});
 
@@ -23,19 +23,20 @@ class UserController {
 
     async login(req, res, next) {
         try {
+            const {role, email} = req.user
+            const tokenPair = jwtService.generateTokenPair(email, role);
+
+            return res.json({tokenPair});
 
         } catch (e) {
-            next(e)
+            next(ApiError.badRequest(e.message));
         }
     };
 
     async check(req, res, next) {
         try {
-            const {id} = req.query;
-            if (!id) {
-                return next(ApiError.notFound(NOT_FOUND))
-            }
-            res.json(id);
+
+            res.json({message: 'all right'});
             next();
         } catch (e) {
             next(e);
