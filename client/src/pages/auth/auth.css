@@ -1,0 +1,22 @@
+.cardAuth {
+    width: 600px;
+    padding: 50px;
+}
+
+.authTitle {
+    margin: auto;
+}
+
+.authForm {
+    display: flex;
+    flex-direction: column;
+}
+.input_a {
+    margin-top: 10px;
+}
+
+.authButton {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}

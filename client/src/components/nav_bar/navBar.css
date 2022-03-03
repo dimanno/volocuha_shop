@@ -1,0 +1,15 @@
+.navBarBox {
+    color: white;
+    text-decoration: none;
+}
+a:hover {
+    color: rgb(153, 218, 248);
+    text-decoration: underline;
+}
+.navLink {
+    margin-left: auto;
+}
+
+.logout {
+    margin-left: 10px;
+}
