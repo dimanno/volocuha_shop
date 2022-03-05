@@ -4,40 +4,101 @@ export class ProductStore {
     constructor() {
         this._category = [
             {id: 1, name: 'Backpacks'},
-            {id: 1, name: 'Tents'}
+            {id: 2, name: 'Tents'},
+            {id: 3, name: 'Sleeping bag'},
+            {id: 4, name: 'Sleeping pads'},
+            {id: 5, name: 'Kitchen'},
+            {id: 6, name: 'Trekking poles'},
+            {id: 7, name: 'Lighting'},
+            {id: 8, name: 'Accessories'},
+
         ]
         this._brand = [
-            {id: 1, name: 'Deuter'},
-            {id: 1, name: 'Terra Incognita'}
+            {id: 1, name: 'Columbia'},
+            {id: 2, name: 'Deuter'},
+            {id: 3, name: 'Fjord Nansen'},
+            {id: 4, name: 'Obsprey'},
+            {id: 5, name: 'Terra Incognita'}
         ]
         this._product = [
-            {id: 1, name: 'Terra Incognita Mountain 100', price: 300, rating: 5, img: 'https://palatka.com.ua/images/watermarked/1/thumbnails/750/553/detailed/70/rukzak-Terra-Incognita-Vertex-blue-grey.jpg'},
-            {id: 2, name: 'Terra Incognita Mountain 100', price: 300, rating: 5, img: 'https://palatka.com.ua/images/watermarked/1/thumbnails/750/553/detailed/70/rukzak-Terra-Incognita-Vertex-blue-grey.jpg'},
-            {id: 3, name: 'Terra Incognita Mountain 100', price: 300, rating: 5, img: 'https://palatka.com.ua/images/watermarked/1/thumbnails/750/553/detailed/70/rukzak-Terra-Incognita-Vertex-blue-grey.jpg'},
-            {id: 4, name: 'Terra Incognita Mountain 100', price: 300, rating: 5, img: 'https://palatka.com.ua/images/watermarked/1/thumbnails/750/553/detailed/70/rukzak-Terra-Incognita-Vertex-blue-grey.jpg'},
-            {id: 5, name: 'Terra Incognita Mountain 100', price: 300, rating: 5, img: 'https://palatka.com.ua/images/watermarked/1/thumbnails/750/553/detailed/70/rukzak-Terra-Incognita-Vertex-blue-grey.jpg'}
+            {
+                id: 1,
+                name: 'Terra Incognita Mountain 100',
+                price: 300,
+                rating: 5,
+                img: 'https://palatka.com.ua/images/watermarked/1/thumbnails/750/553/detailed/70/rukzak-Terra-Incognita-Vertex-blue-grey.jpg'
+            },
+            {
+                id: 2,
+                name: 'Terra Incognita Mountain 100',
+                price: 300,
+                rating: 5,
+                img: 'https://palatka.com.ua/images/watermarked/1/thumbnails/750/553/detailed/70/rukzak-Terra-Incognita-Vertex-blue-grey.jpg'
+            },
+            {
+                id: 3,
+                name: 'Terra Incognita Mountain 100',
+                price: 300,
+                rating: 5,
+                img: 'https://palatka.com.ua/images/watermarked/1/thumbnails/750/553/detailed/70/rukzak-Terra-Incognita-Vertex-blue-grey.jpg'
+            },
+            {
+                id: 4,
+                name: 'Terra Incognita Mountain 100',
+                price: 300,
+                rating: 5,
+                img: 'https://palatka.com.ua/images/watermarked/1/thumbnails/750/553/detailed/70/rukzak-Terra-Incognita-Vertex-blue-grey.jpg'
+            },
+            {
+                id: 5,
+                name: 'Terra Incognita Mountain 100',
+                price: 300,
+                rating: 5,
+                img: 'https://palatka.com.ua/images/watermarked/1/thumbnails/750/553/detailed/70/rukzak-Terra-Incognita-Vertex-blue-grey.jpg'
+            }
         ]
+        this._selectedCategory = {}
+        this._selectedBrand = {}
         makeAutoObservable(this)
     }
 
     setCategory(category) {
         this._category = category
     }
+
     setBrand(brand) {
         this._brand = brand
     }
+
     setProduct(product) {
-    this._product = product
+        this._product = product
     }
 
+    setSelectedCategory(category) {
+        this._selectedCategory = category
+    }
+
+    setSelectedBrand(brand) {
+        this._selectedBrand = brand
+    }
 
     get category() {
         return this._category
     }
+
     get brand() {
         return this._brand
     }
+
     get product() {
         return this._product
+    }
+
+    get selectedCategory() {
+        return this._selectedCategory
+    }
+
+    get selectedBrand() {
+        return this._selectedBrand
     }
 }

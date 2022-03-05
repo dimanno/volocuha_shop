@@ -1,0 +1,9 @@
+.brand_row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.brand_card {
+    padding: 5px;
+    cursor: pointer;
+}
