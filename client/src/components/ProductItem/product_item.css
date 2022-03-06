@@ -1,0 +1,8 @@
+.products_wrap {
+    margin-top: 30px;
+}
+
+.product_card {
+    cursor: pointer;
+    padding: 5px;
+}

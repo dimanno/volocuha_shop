@@ -8,11 +8,11 @@ const CategoryBar = observer(() => {
     const {product} = useContext(Context)
     return (
         <ListGroup>
-            {product.category.map(category =>
+            {product.categories.map(category =>
                 <ListGroup.Item
                     className={'category-item'}
-                    active={category.id === product.selectedCategory.id}
-                    onClick={() => product.setSelectedCategory(category)}
+                    active={category.id === product.selectedCategories.id}
+                    onClick={() => product.setSelectedCategories(category)}
                     key={category.id}
                 >
                     {category.name}

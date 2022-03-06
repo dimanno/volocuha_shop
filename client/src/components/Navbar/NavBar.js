@@ -2,7 +2,6 @@ import './navBar.css'
 import React, {useContext} from 'react';
 import {Context} from "../../index";
 import {Button, Container, Nav, Navbar} from "react-bootstrap";
-import {NavLink} from "react-router-dom";
 import {observer} from "mobx-react-lite";
 
 import {SHOP_ROUTE} from "../../utils/consts";

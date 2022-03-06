@@ -2,7 +2,7 @@ import {makeAutoObservable} from "mobx";
 
 export class ProductStore {
     constructor() {
-        this._category = [
+        this._categories = [
             {id: 1, name: 'Backpacks'},
             {id: 2, name: 'Tents'},
             {id: 3, name: 'Sleeping bag'},
@@ -13,92 +13,92 @@ export class ProductStore {
             {id: 8, name: 'Accessories'},
 
         ]
-        this._brand = [
+        this._brands = [
             {id: 1, name: 'Columbia'},
             {id: 2, name: 'Deuter'},
             {id: 3, name: 'Fjord Nansen'},
             {id: 4, name: 'Obsprey'},
-            {id: 5, name: 'Terra Incognita'}
+            {id: 5, name: 'Terra Incognita'},
         ]
-        this._product = [
+        this._products = [
             {
                 id: 1,
-                name: 'Terra Incognita Mountain 100',
+                name: 'Mountain',
                 price: 300,
                 rating: 5,
                 img: 'https://palatka.com.ua/images/watermarked/1/thumbnails/750/553/detailed/70/rukzak-Terra-Incognita-Vertex-blue-grey.jpg'
             },
             {
                 id: 2,
-                name: 'Terra Incognita Mountain 100',
+                name: 'Mountain 100',
                 price: 300,
                 rating: 5,
                 img: 'https://palatka.com.ua/images/watermarked/1/thumbnails/750/553/detailed/70/rukzak-Terra-Incognita-Vertex-blue-grey.jpg'
             },
             {
                 id: 3,
-                name: 'Terra Incognita Mountain 100',
+                name: 'Mountain 100',
                 price: 300,
                 rating: 5,
                 img: 'https://palatka.com.ua/images/watermarked/1/thumbnails/750/553/detailed/70/rukzak-Terra-Incognita-Vertex-blue-grey.jpg'
             },
             {
                 id: 4,
-                name: 'Terra Incognita Mountain 100',
+                name: 'Mountain 100',
                 price: 300,
                 rating: 5,
                 img: 'https://palatka.com.ua/images/watermarked/1/thumbnails/750/553/detailed/70/rukzak-Terra-Incognita-Vertex-blue-grey.jpg'
             },
             {
                 id: 5,
-                name: 'Terra Incognita Mountain 100',
+                name: 'Mountain 100',
                 price: 300,
                 rating: 5,
                 img: 'https://palatka.com.ua/images/watermarked/1/thumbnails/750/553/detailed/70/rukzak-Terra-Incognita-Vertex-blue-grey.jpg'
             }
         ]
-        this._selectedCategory = {}
-        this._selectedBrand = {}
+        this._selectedCategories = {}
+        this._selectedBrands = {}
         makeAutoObservable(this)
     }
 
-    setCategory(category) {
-        this._category = category
+    setCategories(category) {
+        this._categories = category
     }
 
-    setBrand(brand) {
-        this._brand = brand
+    setBrands(brand) {
+        this._brands = brand
     }
 
-    setProduct(product) {
-        this._product = product
+    setProducts(product) {
+        this._products = product
     }
 
-    setSelectedCategory(category) {
-        this._selectedCategory = category
+    setSelectedCategories(category) {
+        this._selectedCategories = category
     }
 
-    setSelectedBrand(brand) {
-        this._selectedBrand = brand
+    setSelectedBrands(brand) {
+        this._selectedBrands = brand
     }
 
-    get category() {
-        return this._category
+    get categories() {
+        return this._categories
     }
 
-    get brand() {
-        return this._brand
+    get brands() {
+        return this._brands
     }
 
-    get product() {
-        return this._product
+    get products() {
+        return this._products
     }
 
-    get selectedCategory() {
-        return this._selectedCategory
+    get selectedCategories() {
+        return this._selectedCategories
     }
 
-    get selectedBrand() {
-        return this._selectedBrand
+    get selectedBrands() {
+        return this._selectedBrands
     }
 }
